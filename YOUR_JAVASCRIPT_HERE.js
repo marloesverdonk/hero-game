@@ -19,15 +19,28 @@ function rest(hero) {
     return hero
 }
 
-const img = document.getElementById('inn')
-img.addEventListener("click", function () {rest(hero)})
+const inn = document.getElementById('inn')
+inn.addEventListener("click", function () { rest(hero) })
 
 
-
-function pickUpItem() {
-
+function pickUpItem(hero, weapon) {
+    hero.inventory.push(weapon)
 }
 
-function equipWeapon() {
-
+const dagger = document.getElementById('dagger')
+const weapon2 = {
+    type: "dagger",
+    damage: 2,
 }
+dagger.addEventListener("click", function () { pickUpItem(hero, weapon2) })
+
+
+function equipWeapon(hero) {
+    if (hero.inventory.length > 0) {
+        hero.weapon = hero.inventory[0]
+    }
+}
+
+const bag = document.getElementById('bag')
+bag.addEventListener("click", function(){ equipWeapon(hero) })
+
