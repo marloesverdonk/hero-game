@@ -3,29 +3,49 @@
     <meta charset="utf-8">
     <title>Mocha Tests</title>
     <link href="lib/mocha.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" media="screen" type="text/css" />
+
 </head>
 <body>
 
+<main>
+  <img id="inn" src="https://svgsilh.com/svg/47196-9e9e9e.svg">
+  <img id="dagger" src="https://svgsilh.com/svg/155012-607d8b.svg">
+  <img id="bag" src="https://svgsilh.com/svg/575337-795548.svg">
+  <img id="gun" src="https://svgsilh.com/svg/2087470.svg">
+</main>
 
-  <!-- 👍 YOUR HTML HERE 👍 -->
-<img id="inn">
-<img id="dagger">
-<img id="bag">
+<footer>
+  <h1>Hero Status</h1>
+
+  
+  <div class="formSection"> <input type="text" id="name"> </div>
+  <div class="button"> <button onclick="changeHeroName(hero)" type="default">Change hero name</button></div>
+  
+
+  <div id="display"></div>
+</footer>
+
+
 
 
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+  
 
   <div id="mocha">
   <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
   </div>
-
+  
+  
+  
   <script src="lib/chai.js"></script>
   <script src="lib/mocha.js"></script>
   <script src="lib/sinon.js"></script>
   <script>mocha.setup('bdd')</script>
-  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
-  <script src="lib/game_logic.test.js"></script>
-
+  <script src="YOUR_JAVASCRIPT_HERE.js" ></script>
+ <script src="lib/game_logic.test.js"></script>
+  
+ 
 </body>
 </html>
